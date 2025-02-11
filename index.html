@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - ALKHALI ADOUM SALAMAT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            background: white;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header-bar {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 20px auto;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        h2 {
+            color: #2563eb;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #1e40af;
+            margin-top: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #4b5563;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 20px;
+            color: #4b5563;
+        }
+
+        li:before {
+            content: "•";
+            color: #2563eb;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        .achievement-card {
+            background: #f0f9ff;
+            border-left: 4px solid #2563eb;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .achievement-date {
+            color: #2563eb;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .news-section {
+            margin: 30px 0;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #2563eb;
+        }
+
+        .news-content {
+            padding: 15px;
+        }
+
+        .news-date {
+            color: #2563eb;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .news-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1e40af;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #1e40af, #2563eb);
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        .footer-title {
+            color: #ffffff;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-footer {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-footer li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #e5e7eb;
+            padding-left: 0;
+        }
+
+        .contact-footer li:before {
+            content: none;
+        }
+
+        .contact-footer i {
+            width: 20px;
+            color: #93c5fd;
+        }
+
+        .awards-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .awards-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            color: #e5e7eb;
+        }
+
+        .awards-list li:before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+            color: #93c5fd;
+        }
+
+        @media (max-width: 768px) {
+            .name {
+                font-size: 2em;
+            }
+            
+            .container {
+                margin: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-bar">
+            <img src="imag/image.jpg" alt="Photo de profil" class="profile-image">
+            <h1 class="name">ALKHALI ADOUM SALAMAT</h1>
+        </div>
+        
+        <div class="content">
+            <h2>I. État Civil</h2>
+            <div class="contact-info">
+                <p><strong>Nom:</strong> ADOUM<br>
+                   <strong>Situation Familiale:</strong> Marié<br>
+                   <strong>Nationalité:</strong> Tchadienne<br>
+                   <strong>Date de naissance:</strong> 10/09/1976<br>
+                   <strong>Lieu de naissance:</strong> Ati - Batha<br>
+                   <strong>Téléphones:</strong> 00235 91373792 / 63667309<br>
+                   <strong>Email:</strong> adoumalkhali2@gmail.com</p>
+            </div>
+            
+            <h2>II. Diplômes Obtenus</h2>
+            <ul>
+                <li>East China University of Sciences and Technology, Master en Finances, 2004—2008</li>
+                <li>National Taiwan Normal University, Langue Chinoise, 2002 — 2004</li>
+                <li>Bac Série D, 1999/2000</li>
+                <li>BPEC 1997</li>
+            </ul>
+
+            <h2>III. Expériences Professionnelles</h2>
+            <h3>2008-2011</h3>
+            <p>Gestionnaire de Projet, Senior Manager et Administrateur pour le Marché Africain, le Moyen Orient, l'Europe et l'Amérique du Sud de SINOCHEM GROUP.</p>
+            <p><strong>Responsabilités :</strong> Chargé de Négoce international, logistique, finances, ventes et marketing.</p>
+
+            <h2>IV. Réalisations Récentes</h2>
+            <div class="achievement-card">
+                <div class="achievement-date">Octobre 2024</div>
+                <h3>PDG de l'entreprise SADNA - Contribution à l'USTA</h3>
+                <ul>
+                    <li>Rénovation complète de l'administration de l'USTA</li>
+                    <li>Aménagement des bureaux du président et du secrétaire général</li>
+                    <li>Réfection et peinture du bâtiment administratif</li>
+                    <li>Don d'équipements sportifs à l'équipe de l'USTA</li>
+                    <li>Organisation de la cérémonie de remise des diplômes</li>
+                </ul>
+                <p><em>Reconnaissance : Attribution d'une attestation par le président de l'USTA, M. Moutedje-Madji Vincent</em></p>
+            </div>
+        </div>
+
+        <div class="news-section">
+            <h2>Actualités</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <img src="imag/usta1.jpg" alt="Rénovation USTA" class="news-image">
+                    <div class="news-content">
+                        <div class="news-date">26 Octobre 2024</div>
+                        <div class="news-title">Rénovation de l'USTA</div>
+                        <p>Remise officielle des travaux de rénovation de l'administration de l'USTA.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="imag/usta2.jpg" alt="Cérémonie de remise" class="news-image">
+                    <div class="news-content">
+                        <div class="news-date">26 Octobre 2024</div>
+                        <div class="news-title">Cérémonie de Remise des Diplômes</div>
+                        <p>Participation à l'organisation de la cérémonie de remise des diplômes.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="imag/usta3.jpg" alt="Équipements sportifs" class="news-image">
+                    <div class="news-content">
+                        <div class="news-date">Octobre 2024</div>
+                        <div class="news-title">Don d'Équipements Sportifs</div>
+                        <p>Fourniture d'équipements sportifs à l'équipe de l'USTA.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Réseaux Sociaux</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="contact-footer">
+                    <li><i class="fas fa-phone"></i> +235 91373792 / 63667309</li>
+                    <li><i class="fas fa-envelope"></i> adoumalkhali2@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Ati - Batha, Tchad</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Reconnaissances</h3>
+                <ul class="awards-list">
+                    <li>Attestation de reconnaissance USTA 2024</li>
+                    <li>PDG de l'entreprise SADNA</li>
+                    <li>Entrepreneur et Cadre du Batha</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
