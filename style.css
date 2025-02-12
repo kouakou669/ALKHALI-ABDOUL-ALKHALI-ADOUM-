@@ -299,3 +299,21 @@ li:before {
         flex-wrap: wrap;
     }
 }
+
+
+.feature-news .news-content {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.feature-news {
+    position: relative;
+    min-height: 200px; /* Ajustez selon vos besoins */
+}
+
+.feature-news .news-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
